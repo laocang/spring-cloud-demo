@@ -1,0 +1,16 @@
+server:
+  port: 7555
+spring:
+  application:
+    name: hystrix
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7777/eureka/
+  instance:
+    hostname:feign
+ribbon:
+  eureka:
+    enabled: true
+  service-login:
+    ribbon: com.netflix.loadbalancer.RandomRule
